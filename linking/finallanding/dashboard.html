@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <header>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="what we offer.html">Services</a></li>
+      <li><a href="contact us.html">Contact Us</a></li>
+      <li><a href="login2.html">Login</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">LOGO</a></li>
+      <li class="hideOnMobile"><a href="index.html">Home</a></li>
+      <li class="hideOnMobile"><a href="#">About</a></li>
+      <li class="hideOnMobile"><a href="what we offer.css">Services</a></li>
+      <li class="hideOnMobile"><a href="contact us.html">Contact Us</a></li>
+      <li class="hideOnMobile"><a href="login2.html">Login</a></li>
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+  </header>
+  <div class="container2">
+    <img src="Screenshot_25-7-2024_183655_www.bing.com.jpeg" alt="header image" class="Header-Image">
+   </div>
+  <header>
+    <h1>Personal Finance Dashboard</h1>
+</header>
+<main>
+
+
+  <div class="card">
+    <h3>Income</h3>
+    <p id="income">$0.00</p>
+    <input type="number" id="income-input" placeholder="Enter Income" />
+    <button id="update-income">Update Income</button>
+</div>
+<div class="card">
+    <h3>Net Worth</h3>
+    <p id="net-worth">$0.00</p>
+    <input type="number" id="net-worth-input" placeholder="Enter Net Worth" />
+    <button id="update-net-worth">Update Net Worth</button>
+</div>
+
+
+    <div class="card">
+        <h3>Expenses</h3>
+        <p id="expenses">$0.00</p>
+    </div>
+    <div class="card">
+        <h3>Savings</h3>
+        <p id="savings">$0.00</p>
+    </div>
+    <div class="container3">
+      <h1>Expense Tracker</h1>
+      <form id="expense-form">
+          <input type="text" id="expense-name" placeholder="Expense Name" required />
+          <input type="number" id="expense-amount" placeholder="Amount" required />
+          <select id="expense-category" required>
+              <option value="" disabled selected>Select Category</option>
+              <option value="Food">Food</option>
+              <option value="Transport">Transport</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Other">Other</option>
+          </select>
+          <input type="date" id="expense-date" required />
+          <button type="submit">Add Expense</button>
+      </form>
+      <div class="expense-table">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Expense Name</th>
+                      <th>Amount</th>
+                      <th>Category</th>
+                      <th>Date</th>
+                      <th>Action</th>
+                  </tr>
+              </thead>
+              <tbody id="expense-list"></tbody>
+          </table>
+          <div class="total-amount">
+              <strong>Total:</strong> $<span id="total-amount">0</span>
+          </div>
+      </div>
+      <div class="filter">
+          <label for="filter-category">Filter by Category:</label>
+          <select id="filter-category">
+              <option value="All">All</option>
+              <option value="Food">Food</option>
+              <option value="Transport">Transport</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Other">Other</option>
+          </select>
+      </div>
+    </div>
+      
+
+    
+   
+</main>
+  <script src="script1.js">
+    
+  </script>
+</body>
+</html>
